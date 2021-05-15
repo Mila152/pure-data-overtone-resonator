@@ -1,2 +1,2 @@
 *.txt linguist-documentation
-*.pd linguist-language=Pure Data
+*.pd linguist-detectable=true
