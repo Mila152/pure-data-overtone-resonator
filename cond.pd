@@ -1,0 +1,47 @@
+#N canvas 979 205 701 573 12;
+#X obj 112 94 + 1;
+#X obj 23 120 moses;
+#X obj 109 190 moses;
+#X floatatom 23 61 5 0 0 0 X - -;
+#X floatatom 141 60 5 0 0 0 Y - -;
+#X floatatom 197 60 5 0 0 0 Z - -;
+#X text 11 -2 IF X >= Y && X <= Z THEN bang;
+#X floatatom 23 152 5 0 0 0 - - -;
+#X floatatom 161 222 5 0 0 0 - - -;
+#X obj 161 269 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 220 277 <=;
+#X obj 243 420 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 220 366 sel 0 1;
+#X obj 220 420 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 220 323 change;
+#X text 54 268 multiple bangs;
+#X text 153 418 one bang;
+#X obj 23 25 inlet;
+#X obj 141 23 inlet;
+#X obj 197 23 inlet;
+#X obj 161 310 outlet;
+#X obj 220 483 outlet;
+#X obj 243 455 outlet;
+#X connect 0 0 1 1;
+#X connect 1 0 7 0;
+#X connect 2 1 8 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 1;
+#X connect 5 0 0 0;
+#X connect 5 0 10 1;
+#X connect 7 0 2 0;
+#X connect 8 0 9 0;
+#X connect 8 0 10 0;
+#X connect 9 0 20 0;
+#X connect 10 0 14 0;
+#X connect 11 0 22 0;
+#X connect 12 0 13 0;
+#X connect 12 1 11 0;
+#X connect 13 0 21 0;
+#X connect 14 0 12 0;
+#X connect 17 0 3 0;
+#X connect 18 0 4 0;
+#X connect 19 0 5 0;
